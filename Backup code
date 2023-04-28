@@ -1,0 +1,73 @@
+/**
+ * C program to list all files and sub-directories in a directory.
+ */
+
+#include <stdio.h>
+#include <sys/types.h>
+#include <dirent.h>
+
+
+//void listFiles(const char *path);
+
+int main() {
+    // Directory path to list files
+    char fname[30],ch;
+    FILE *fps, *fpt;
+    char path[100] = "C:\\Users\\test\\Downloads\\data1\\";
+    char sbuf[1024];
+    struct dirent *dp;
+    //struct dirent *entry;
+    // DIR *folder;
+    DIR *dir = opendir(path);
+    if (!dir)
+        return 1;
+
+    while ((dp = readdir(dir)) != NULL)
+    {
+
+        if (!strcmp(dp->d_name, ".") ||  !strcmp(dp->d_name, ".."))
+        {
+            continue;
+        }
+        else{
+            sprintf (sbuf, "%s\%s", path, dp->d_name);
+            puts(sbuf);
+
+            fps = fopen(sbuf, "r");
+            if(fps == NULL)
+                return 0;
+            fpt = fopen("temp.txt", "w");
+            if(fpt == NULL)
+                return 0;
+            ch = fgetc(fps);
+            while(ch != EOF)
+            {
+                ch = ch+100;
+                fputc(ch, fpt);
+                ch = fgetc(fps);
+            }
+            fclose(fps);
+            fclose(fpt);
+            fps = fopen(sbuf, "w");
+            if(fps == NULL)
+                return 0;
+            fpt = fopen("temp.txt", "r");
+            if(fpt == NULL)
+                return 0;
+            ch = fgetc(fpt);
+            while(ch != EOF)
+            {
+                ch = fputc(ch, fps);
+                ch = fgetc(fpt);
+            }
+            fclose(fps);
+            fclose(fpt);
+        }
+        //printf("\n %s",sbuf);
+       // puts(sbuf);
+
+    }
+    closedir(dir);
+}
+
+

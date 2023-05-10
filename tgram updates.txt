@@ -1,0 +1,108 @@
+SETUP
+
+- Course Introduction
+⦁  Who I am
+⦁  Who is Malicious Group
+⦁  NOTE: Do this part last, in case it changes before the course is complete.
+
+- Environment Setup
+⦁  Windows 10/11 VM
+⦁  Kali Linux VM (Optional - msfvenom usage)
+⦁  SysInternals
+⦁  Explorer Suite
+⦁  X64dbg
+⦁  Process Hacker
+⦁  PE Studio
+⦁  TODO: Setting up short-cuts to the desktop
+
+- Setting up the CLion IDE
+⦁  Installing CLion
+⦁  Setting up a theme
+⦁  Create ­­­­folder structure and set AV exclusions
+
+- Internals Overview
+⦁  PE File Format
+⦁  Windows API / WinAPI
+⦁  Processes
+⦁  Threads
+
+- Essentials Overview
+⦁  Creating a simple EXE
+⦁  Creating a simple DLL
+⦁  Payload generation using msfvenom
+⦁  Local Process Injection
+⦁  Remote Process Injection
+⦁  DLL Injection
+⦁  Payload storage (.text, .data, .rdata, .rsrc, external)
+⦁  Payload encoding (B64, XOR)
+⦁  Payload encryption (RC4, AES)
+
+
+
+Code Injection Techniques
+
+Local mapping injection
+Remote mapping injection
+Local function stomping
+Remote function stomping
+Classic Injection Variations
+Reflective DLLs
+Remote APC Injection
+APC Injection
+DLL Injection
+Process Doppelganging
+Process Ghosting
+Process Hollowing
+Indirect Syscalls
+No-patch hooking
+Hooking
+
+Payload Obfuscation Techniques
+
+Payload Encoding
+Payload Encrypting
+string hashing and obfuscation
+function pointer obfuscation
+CRT library removal
+function call obfuscation
+
+Payload Delivery Techniques
+
+Payload Placement
+Local Payload Execution
+Remote Payload Execution
+Payload Staging
+Payload Execution via Callbacks
+Controlling payload execution
+
+Anti-Detection Techniques
+
+AV Detection Mechanisms
+PPID spoofing
+Global Hooks
+Userland Rootkit Tech
+PEB Manipulations
+Process Memory Hiding
+Herpaderping
+
+File Manipulation Techniques
+
+COFF File Format
+Payload storage
+Filesystem Corners
+Objects Enumeration in Memoey
+
+Other Techniques
+
+Binary Signing
+x86 vs 64
+Payload Control via IPC
+Custom RPC
+
+
+...................
+
+
+
+	https://blog.delivr.to/delivr-tos-top-10-payloads-highlighting-notable-and-trending-techniques-fb5e9fdd9356
+	https://dmcxblue.gitbook.io/red-team-notes-2-0/red-team-infrastructure/red-team-infrastructure

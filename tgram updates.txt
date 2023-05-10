@@ -106,3 +106,4 @@ Custom RPC
 
 	https://blog.delivr.to/delivr-tos-top-10-payloads-highlighting-notable-and-trending-techniques-fb5e9fdd9356
 	https://dmcxblue.gitbook.io/red-team-notes-2-0/red-team-infrastructure/red-team-infrastructure
+	https://blog.malicious.group/automating-c2-infrastructure-with-terraform-nebula-caddy-and-cobalt-strike/

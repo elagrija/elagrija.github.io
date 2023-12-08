@@ -1,0 +1,19 @@
+
+
+
+Date: 8 th Dec 2023
+
+https://www.akamai.com/blog/security-research/spoofing-dns-by-abusing-dhcp
+
+https://github.com/fortra/impacket/blob/master/examples/ntlmrelayx.py
+
+
+https://disman.tl/2015/01/30/an-improved-reflective-dll-injection-technique.html
+
+https://www.naksyn.com/edr%20evasion/2023/11/18/mockingjay-revisited-process-stomping-srdi-beacon.html
+
+https://www.netspi.com/blog/technical/adversary-simulation/srdi-shellcode-reflective-dll-injection/
+
+https://github.com/monoxgas/sRDI
+
+https://disman.tl/2015/01/30/an-improved-reflective-dll-injection-technique.html

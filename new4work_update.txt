@@ -1,0 +1,41 @@
+
+
+
+	New 4 Current job + new Job
+
+
+	https://www.elastic.co/security-labs/dismantling-smart-app-control
+
+		LNK stomping may have many variants, making signature-based detection on LNK files difficult. However, they should all trigger a similar behavioral signal- explorer.exe overwriting an LNK file. This is especially anomalous in the downloads folder or when the LNK has the Mark of the Web.
+
+file where event.action == "overwrite" and file.extension : "lnk" and
+ process.name : "explorer.exe" and process.thread.Ext.call_stack_summary : "ntdll.dll|*|windows.storage.dll|shell32.dll|*" and
+ (
+  file.path : ("?:\\Users\\*\\Downloads\\*.lnk", "?:\\Users\\*\\AppData\\Local\\Temp\\*.lnk") or
+  file.Ext.windows.zone_identifier == 3
+  )
+
+		https://kbi.media/press-release/grimresource-microsoft-management-console-for-initial-access-and-evasion/
+
+		https://github.com/ipSlav/DirtyCLR/tree/7b1280fee780413d43adbad9f4c2a9ce7ed9f29e
+
+		https://github.com/ipSlav/DirtyCLR/tree/7b1280fee780413d43adbad9f4c2a9ce7ed9f29e
+
+
+
+		(Good Read for offensive + Defensive )
+
+	https://www.mdsec.co.uk/2024/02/active-directory-enumeration-for-red-teams/
+
+		https://medium.com/@browninfosecguy/an-introduction-to-powerview-bdfd953f2c4c
+
+	
+
+	Job
+
+	https://emp.jobylon.com/jobs/179713-withsecure-threat-hunter/
+
+	https://www.withsecure.com/en/about-us/careers-at-withsecure/open-jobs
+
+
+		

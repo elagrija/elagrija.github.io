@@ -37,5 +37,26 @@ file where event.action == "overwrite" and file.extension : "lnk" and
 
 	https://www.withsecure.com/en/about-us/careers-at-withsecure/open-jobs
 
+	https://tenendo.com/red-team-operator/
+
+
+Date: 12 th August 2024
+
+
+https://github.com/ricardojoserf/TrickDump
+https://offensiveforce.com/CRTO-Review-2024
+https://github.com/zimnyaa/beepsyscall/
+
+https://tishina.in/home
+
+https://janbakker.tech/how-to-set-up-evilginx-to-phish-office-365-credentials/
+
+https://www.youtube.com/watch?v=tG8WacArJsE
+
+( thread Hijacking )
+
+
+
+
 
 		

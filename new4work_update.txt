@@ -70,6 +70,14 @@ https://github.com/RoseSecurity/Red-Teaming-TTPs
 
 
 
+Date: 21 'st August 2024
+
+https://www.vergiliusproject.com/kernels/x64/windows-11/23h2/_OBJECT_ATTRIBUTES
+
+
+
+
+
 
 
 		

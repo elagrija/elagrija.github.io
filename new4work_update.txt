@@ -74,6 +74,16 @@ Date: 21 'st August 2024
 
 https://www.vergiliusproject.com/kernels/x64/windows-11/23h2/_OBJECT_ATTRIBUTES
 
+Date 22 nd August 2024
+
+https://www.pentestpartners.com/security-blog/living-off-the-land-with-bluetooth-pan/
+
+https://www.aerospacevillage.org/mission
+https://github.com/BC-SECURITY/Empire
+
+
+On today's episode of "do you know your tools", did you know that both CrackMapExec and NetExec both make TWO connections to each target?
+
 
 
 

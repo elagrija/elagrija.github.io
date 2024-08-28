@@ -85,6 +85,22 @@ https://github.com/BC-SECURITY/Empire
 On today's episode of "do you know your tools", did you know that both CrackMapExec and NetExec both make TWO connections to each target?
 
 
+Date: 28 th August 2024
+
+https://github.com/nixpal/shellsilo
+https://github.com/nixpal/ProcInjectSyscall/tree/main
+
+https://pentestlaboratories.com/2020/05/26/appdomainmanager-injection-and-detection/
+
+https://jp-security-ntt.translate.goog/tech_blog/appdomainmanager-injection?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp&_x_tr_hist=true
+
+
+
+
+
+
+
+
 
 
 

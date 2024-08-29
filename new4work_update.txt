@@ -97,7 +97,13 @@ https://jp-security-ntt.translate.goog/tech_blog/appdomainmanager-injection?_x_t
 
 
 
+Date: 29 th August 2024
 
+https://music.youtube.com/
+
+https://securityintelligence.com/x-force/using-veh-for-defense-evasion-process-injection/
+
+https://research.nccgroup.com/2022/03/01/detecting-anomalous-vectored-exception-handlers-on-windows/
 
 
 

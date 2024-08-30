@@ -108,6 +108,23 @@ https://research.nccgroup.com/2022/03/01/detecting-anomalous-vectored-exception-
 
 
 
+Date: 30 th August 2024
+
+
+https://malcrove.com/seamlesspass-leveraging-kerberos-tickets-to-access-the-cloud/
+
+ manipulating Vectored Exception Handlers to evade some EDRs and perform threadless process injection
+
+https://pentestlaboratories.com/2020/05/26/appdomainmanager-injection-and-detection/
+
+https://jp-security-ntt.translate.goog/tech_blog/appdomainmanager-injection?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp&_x_tr_hist=true
+
+
+
+
+
+
+
 
 
 

@@ -127,6 +127,12 @@ https://gist.github.com/djhohnstein/afb93a114b848e16facf0b98cd7cb57b
 
 
 
+Date: 03 rd Sep 2024
+
+https://detect.fyi/exploring-execute-assembly-a-deep-dive-into-in-memory-threat-execution-60adc61aef8
+https://osintmatter.com/holiday-heists-dissecting-the-phishing-operations-against-the-travel-industry-pt-1/
+
+
 
 
 

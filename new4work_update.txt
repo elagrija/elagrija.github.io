@@ -132,6 +132,27 @@ Date: 03 rd Sep 2024
 https://detect.fyi/exploring-execute-assembly-a-deep-dive-into-in-memory-threat-execution-60adc61aef8
 https://osintmatter.com/holiday-heists-dissecting-the-phishing-operations-against-the-travel-industry-pt-1/
 
+Date: 05 th Sep 2024
+
+https://osintmatter.com/holiday-heists-dissecting-the-phishing-operations-against-the-travel-industry-pt-1/
+
+
+https://github.com/sevagas/macro_pack - Threat actors using MacroPack to deploy Brute Ratel, Havoc and PhantomCore payloads
+
+https://attl4s.github.io/
+
+
+https://redops.at/en/blog/direct-syscalls-a-journey-from-high-to-low
+
+https://securityintelligence.com/x-force/detecting-intune-lateral-movement/
+
+
+
+
+
+
+
+
 
 
 

@@ -39,6 +39,8 @@ file where event.action == "overwrite" and file.extension : "lnk" and
 
 	https://tenendo.com/red-team-operator/
 
+	https://www.bsigroup.com/en-IN/About-BSI/Careers/
+
 
 Date: 12 th August 2024
 

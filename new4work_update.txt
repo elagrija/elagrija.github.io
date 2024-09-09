@@ -149,6 +149,14 @@ https://redops.at/en/blog/direct-syscalls-a-journey-from-high-to-low
 https://securityintelligence.com/x-force/detecting-intune-lateral-movement/
 
 
+...........
+
+
+https://trustedsec.com/blog/when-on-workstation-do-as-the-local-browsers-do?utm_content=306378652&utm_medium=social&utm_source=twitter&hss_channel=tw-403811306
+
+https://gatari.dev/posts/the-art-of-exploiting-ad-from-linux/ --- Singapore 
+
+
 
 
 

@@ -215,6 +215,8 @@ https://tierzerosecurity.co.nz/2024/09/18/blind-edr-revisited.html
 https://practicalsecurityanalytics.com/extracting-credentials-from-windows-logs/
 
 
+https://aceresponder.com/learn
+
 
 
 

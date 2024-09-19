@@ -218,6 +218,16 @@ https://practicalsecurityanalytics.com/extracting-credentials-from-windows-logs/
 https://aceresponder.com/learn
 
 
+..........
+
+
+Sep 19 th 2024
+
+https://www.aon.com/en/insights/cyber-labs/bypassing-edr-through-retrosigned-drivers-and-system-time-manipulation
+
+https://blog.compass-security.com/2024/09/three-headed-potato-dog/
+
+
 
 
 

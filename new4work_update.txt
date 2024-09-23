@@ -238,6 +238,25 @@ https://righteousit.com/2024/07/24/hiding-linux-processes-with-bind-mounts/
 https://lyra.horse/blog/2024/09/using-youtube-to-steal-your-files/
 
 
+..............
+
+
+https://sec-consult.com/blog/detail/msi-installer-repair-to-system-a-detailed-journey/
+
+https://www.trendmicro.com/en_us/research/24/i/earth-baxia-spear-phishing-and-geoserver-exploit.html
+
+https://eversinc33.com/posts/anti-anti-rootkit-part-ii.html
+
+https://www.semperis.com/blog/password-spraying-detection-in-active-directory/
+
+https://x.com/BallisKit
+
+BallisKit provides tooling and services to professional Pentesters & Red Teams. 
+We develop  MacroPack and ShellcodePack. 
+
+https://lyra.horse/blog/2024/09/using-youtube-to-steal-your-files/
+
+
 
 
 

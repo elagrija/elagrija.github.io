@@ -266,6 +266,17 @@ https://github.com/Evi1Grey5/Recursive-Loader
 Itoshiro village
 
 
+......................
+
+
+
+https://www.cybereason.com/blog/dcom-lateral-movement-techniques
+https://www.scorpiones.io/articles/lateral-movement-using-dcom-objects
+https://www.mdsec.co.uk/2020/09/i-like-to-move-it-windows-lateral-movement-part-2-dcom/
+https://github.com/Kriegel/ComPower
+https://0xpat.github.io/
+https://www.youtube.com/watch?v=8tjrFm2K30Q
+
 
 
 

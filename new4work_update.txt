@@ -275,6 +275,13 @@ https://www.scorpiones.io/articles/lateral-movement-using-dcom-objects
 https://www.mdsec.co.uk/2020/09/i-like-to-move-it-windows-lateral-movement-part-2-dcom/
 https://github.com/Kriegel/ComPower
 https://0xpat.github.io/
+
+
+.....
+
+
+
+https://blog.sonnes.cloud/lets-create-a-free-lab-with-microsoft-defender-for-endpoint-and-simulate-some-ransomware-attacks-get-the-correct-free-trial/
 https://www.youtube.com/watch?v=8tjrFm2K30Q
 
 

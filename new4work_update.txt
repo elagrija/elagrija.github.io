@@ -283,6 +283,12 @@ https://0xpat.github.io/
 https://research.checkpoint.com/2024/breaking-boundaries-investigating-vulnerable-drivers-and-mitigating-risks/
 
 
+https://artemonsecurity.blogspot.com/
+
+A blog about rootkits research and the Windows kernel
+
+
+
 https://blog.sonnes.cloud/lets-create-a-free-lab-with-microsoft-defender-for-endpoint-and-simulate-some-ransomware-attacks-get-the-correct-free-trial/
 https://www.youtube.com/watch?v=8tjrFm2K30Q
 

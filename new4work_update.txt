@@ -288,6 +288,9 @@ https://artemonsecurity.blogspot.com/
 A blog about rootkits research and the Windows kernel
 
 
+https://blog.fox-it.com/2024/09/25/red-teaming-in-the-age-of-edr-evasion-of-endpoint-detection-through-malware-virtualisation/
+
+
 
 https://blog.sonnes.cloud/lets-create-a-free-lab-with-microsoft-defender-for-endpoint-and-simulate-some-ransomware-attacks-get-the-correct-free-trial/
 https://www.youtube.com/watch?v=8tjrFm2K30Q

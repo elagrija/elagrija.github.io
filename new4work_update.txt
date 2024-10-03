@@ -300,6 +300,23 @@ https://www.youtube.com/watch?v=8tjrFm2K30Q
 https://pentestlab.blog/2020/05/20/persistence-com-hijacking/
 
 
+..............
+
+3rd Oct 2024
+
+https://www.compass-security.com/en/company/jobs/it-security-analyst/penetration-tester
+
+
+https://practicalsecurityanalytics.com/obfuscating-api-patches-to-bypass-new-windows-defender-behavior-signatures/
+
+https://blog.compass-security.com/2024/05/how-to-become-a-hacker/
+
+https://blog.compass-security.com/2024/10/com-cross-session-activation/
+
+COM is old but gold—for attackers!
+
+https://blog.compass-security.com/2024/10/com-cross-session-activation/
+
 
 
 		

@@ -318,5 +318,21 @@ COM is old but gold—for attackers!
 https://blog.compass-security.com/2024/10/com-cross-session-activation/
 
 
+...............
+
+Date: 9 th Oct 2024
+
+https://github.com/renniepak/CSPBypass
+
+https://dfir.ch/posts/tmate_as_a_backdoor/
+
+http://cspbypass.com/
+
+https://github.com/MalwareTech/EDR-Preloader
+
+https://malwaretech.com/2024/02/bypassing-edrs-with-edr-preload.html
+
+
+
 
 		

@@ -333,6 +333,14 @@ https://github.com/MalwareTech/EDR-Preloader
 https://malwaretech.com/2024/02/bypassing-edrs-with-edr-preload.html
 
 
+Date: 10 th Oct 2024
+
+
+https://github.com/amjcyber/pwnlook
+
+https://www.dimastr.com/redemption/security.htm#redemptionloader  --- com
+
+https://lolcads.github.io/posts/2024/09/bountyhunter/
 
 
 		

@@ -343,4 +343,17 @@ https://www.dimastr.com/redemption/security.htm#redemptionloader  --- com
 https://lolcads.github.io/posts/2024/09/bountyhunter/
 
 
+
+15 th Oct 2024
+
+
+https://wafflesexploits.github.io/posts/Indirect-Waffles-Shellcode-Loader-to-Bypass-EDRs/
+
+MalDev aca.. Spain guy
+
+https://redops.at/en/blog/cobalt-strike-cdn-reverse-proxy-setup
+
+
+
+
 		

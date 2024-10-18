@@ -354,6 +354,16 @@ MalDev aca.. Spain guy
 https://redops.at/en/blog/cobalt-strike-cdn-reverse-proxy-setup
 
 
+...................
 
+
+Date: 18 th Oct 2024
+
+
+https://learn.microsoft.com/en-us/cpp/cpp/event-handling-in-com?view=msvc-170&redirectedfrom=MSDN
+
+https://stackoverflow.com/questions/25572024/cannot-compile-microsoft-com-activex-example
+
+https://alax.info/svn/public/trunk/Utilities/Miscellaneous/ComEventAttribute/
 
 		

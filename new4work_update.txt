@@ -366,4 +366,17 @@ https://stackoverflow.com/questions/25572024/cannot-compile-microsoft-com-active
 
 https://alax.info/svn/public/trunk/Utilities/Miscellaneous/ComEventAttribute/
 
+
+
+...............
+
+
+
+https://sabotagesec.com/i-hate-you-com-pitfalls-of-com-object-activation/
+
+https://github.com/silverf0x/RpcView
+
+RpcView is an open-source tool to explore and decompile all RPC functionalities present on a Microsoft system
+
+https://analyzer.sublime.security/
 		

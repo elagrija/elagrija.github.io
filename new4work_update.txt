@@ -380,3 +380,8 @@ RpcView is an open-source tool to explore and decompile all RPC functionalities 
 
 https://analyzer.sublime.security/
 		
+.................
+
+
+
+https://github.com/forderud/ComSamples  -- Working Code

@@ -401,3 +401,11 @@ https://mrexodia.github.io/files/wicc-2023-slides.pdf
 https://blog.compass-security.com/2024/10/voice-cloning-with-deep-learning-models/
 
 
+
+https://github.com/WKL-Sec/dcomhijack/tree/main?tab=readme-ov-file
+https://www.youtube.com/watch?v=I_nJltUokE0
+
+
+https://www.mdsec.co.uk/2020/10/i-live-to-move-it-windows-lateral-movement-part-3-dll-hijacking/
+
+

@@ -376,6 +376,8 @@ https://sabotagesec.com/i-hate-you-com-pitfalls-of-com-object-activation/
 
 https://github.com/silverf0x/RpcView
 
+
+
 RpcView is an open-source tool to explore and decompile all RPC functionalities present on a Microsoft system
 
 https://analyzer.sublime.security/
@@ -385,3 +387,17 @@ https://analyzer.sublime.security/
 
 
 https://github.com/forderud/ComSamples  -- Working Code
+
+
+..............
+
+
+Remind links
+
+ 𝐈𝐧𝐝𝐢𝐫𝐞𝐜𝐭 𝐖𝐚𝐟𝐟𝐥𝐞𝐬 - 𝐒𝐡𝐞𝐥𝐥𝐜𝐨𝐝𝐞 𝐋𝐨𝐚𝐝𝐞𝐫 𝐭𝐨 𝐁𝐲𝐩𝐚𝐬𝐬 𝐄𝐃𝐑𝐬 👾
+
+https://mrexodia.github.io/files/wicc-2023-slides.pdf
+
+https://blog.compass-security.com/2024/10/voice-cloning-with-deep-learning-models/
+
+

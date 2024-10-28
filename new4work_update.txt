@@ -402,6 +402,21 @@ https://blog.compass-security.com/2024/10/voice-cloning-with-deep-learning-model
 
 
 
+....
+
+
+https://0xdf.gitlab.io/2024/10/26/htb-mist.html#
+
+
+AD -htb
+
+https://cicada-8.medium.com/hijack-the-typelib-new-com-persistence-technique-32ae1d284661
+
+
+https://viperone.gitbook.io/pentest-everything/everything/everything-active-directory/adcs/esc1
+
+
+
 https://github.com/WKL-Sec/dcomhijack/tree/main?tab=readme-ov-file
 https://www.youtube.com/watch?v=I_nJltUokE0
 

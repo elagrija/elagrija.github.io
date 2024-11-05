@@ -428,3 +428,5 @@ https://www.mdsec.co.uk/2020/10/i-live-to-move-it-windows-lateral-movement-part-
 
 https://www.huntress.com/blog/silencing-the-edr-silencers
 
+https://github.com/jsecurity101/JonMon/wiki#installation
+

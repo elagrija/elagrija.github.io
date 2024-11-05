@@ -424,3 +424,7 @@ https://www.youtube.com/watch?v=I_nJltUokE0
 https://www.mdsec.co.uk/2020/10/i-live-to-move-it-windows-lateral-movement-part-3-dll-hijacking/
 
 
+05 th Nov 2024
+
+https://www.huntress.com/blog/silencing-the-edr-silencers
+

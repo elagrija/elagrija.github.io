@@ -448,3 +448,8 @@ Activate and call DCOM objects without proxy
 https://0xdf.gitlab.io/2024/10/26/htb-mist.html#
 
 
+
+https://github.com/ExaTrack/Kdrill
+
+https://www.youtube.com/watch?v=dfMuzAZRGm4 -- com learn
+

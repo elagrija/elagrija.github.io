@@ -439,3 +439,12 @@ ElavarasanMahalingam@2helpltts.onmicrosoft.com
 Ela's2help@104
 
 
+07 th Nov 2024
+
+https://blog.exatrack.com/STUBborn/
+
+Activate and call DCOM objects without proxy
+
+https://0xdf.gitlab.io/2024/10/26/htb-mist.html#
+
+

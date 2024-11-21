@@ -453,3 +453,13 @@ https://github.com/ExaTrack/Kdrill
 
 https://www.youtube.com/watch?v=dfMuzAZRGm4 -- com learn
 
+
+
+..........
+
+21 'st Nov 2024
+
+https://medium.com/@luisgerardomoret_69654/making-a-powershell-shellcode-downloader-that-evades-defender-without-amsi-bypass-d2cf13f18409
+
+https://github.com/Offensive-Panda/ShadowDumper
+

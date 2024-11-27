@@ -463,3 +463,13 @@ https://medium.com/@luisgerardomoret_69654/making-a-powershell-shellcode-downloa
 
 https://github.com/Offensive-Panda/ShadowDumper
 
+
+27 th Nov 2024
+
+https://training.zeropointsecurity.co.uk/courses/bof-dev-and-tradecraft
+	https://github.com/hackerhouse-opensource/iscsicpl_bypassUAC
+
+https://www.xintra.org/blog/tokens-in-entra-id-guide
+https://www.xintra.org/blog/lateral-movement-entraid-cross-tenant-synchronization 
+
+	with Threat HUnting

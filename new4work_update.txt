@@ -488,3 +488,7 @@ https://x.com/RtlDallas/status/1857375784219955246
 
 to bypass Elastic, I created a project to easily perform stack spoofing
 
+
+29 th Nov 2024
+
+https://github.com/NtDallas/Ulfberht

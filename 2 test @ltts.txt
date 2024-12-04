@@ -1,0 +1,32 @@
+
+
+	$excel = New-Object -ComObject Excel.Application
+	$workbook = $excel.Workbooks.Add()
+	$sheet = $workbook.Sheets.Item(1)
+	$sheet.Cells.Item(1, 1).Value = "Hello, Excel!"
+	$excel.Visible = $true
+
+	$instance = [activator]::CreateInstance([type]::GetTypeFromProgID("Excel.ChartApplication", XXX.XXX.XXX.XXX))
+	
+	# Replace XXX.XXX.XXX.XXX with the IP address of the remote machine.
+$remoteAddress = "XXX.XXX.XXX.XXX"
+
+# Get the COM Type from the ProgID.
+$comType = [type]::GetTypeFromProgID("Excel.ChartApplication", $remoteAddress)
+
+# Create the COM object instance on the remote machine.
+$instance = [activator]::CreateInstance($comType)
+
+# Check if the instance was successfully created.
+if ($instance -eq $null) {
+    Write-Host "Failed to create the Excel.ChartApplication COM object."
+} else {
+    Write-Host "COM object created successfully!"
+}
+
+
+If you need to use Excel.Application instead of Excel.ChartApplication, simply replace the ProgID in the script:
+
+powershell
+Copy code
+[type]::GetTypeFromProgID("Excel.Application", $remoteAddress)

@@ -492,3 +492,21 @@ to bypass Elastic, I created a project to easily perform stack spoofing
 29 th Nov 2024
 
 https://github.com/NtDallas/Ulfberht
+
+
+
+04 th Dec 2024
+
+https://medium.com/@luisgerardomoret_69654/obfuscating-office-macros-to-evade-defender-468606f5790c
+
+https://t.co/1jecAPhXW0
+
+"is it possible to bruteforce RPC endpoint to perform code exec if you can't access EPM/SMB?
+
+Activation Context Hijack 
+
+https://github.com/Kudaes/Eclipse
+
+https://academy.bluraven.io/blog/edr-silencer-and-beyond-exploring-methods-to-block-edr-communication-part-2
+
+https://rastamouse.me/udrl-sleepmask-and-beacongate/

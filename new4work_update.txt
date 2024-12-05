@@ -510,3 +510,16 @@ https://github.com/Kudaes/Eclipse
 https://academy.bluraven.io/blog/edr-silencer-and-beyond-exploring-methods-to-block-edr-communication-part-2
 
 https://rastamouse.me/udrl-sleepmask-and-beacongate/
+
+
+
+...........
+
+
+05 th Dec 2024
+
+https://github.com/Wh04m1001/IDiagnosticProfileUAC
+
+https://github.com/zcgonvh/TaskSchedulerMisc
+
+https://www.zcgonvh.com/post/Advanced_Windows_Task_Scheduler_Playbook-Part.2_from_COM_to_UAC_bypass_and_get_SYSTEM_dirtectly.html

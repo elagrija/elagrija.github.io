@@ -541,4 +541,5 @@ https://posts.specterops.io/spa-is-for-single-page-abuse-using-single-page-appli
 
 https://en.wikipedia.org/wiki/Thales_Group ( 4 cybersec jobs)
 
+https://github.com/EspressoCake/Defender-Exclusions-Creator-BOF
 https://careers.thalesgroup.com/global/en/search-results?keywords=cyber

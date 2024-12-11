@@ -523,3 +523,22 @@ https://github.com/Wh04m1001/IDiagnosticProfileUAC
 https://github.com/zcgonvh/TaskSchedulerMisc
 
 https://www.zcgonvh.com/post/Advanced_Windows_Task_Scheduler_Playbook-Part.2_from_COM_to_UAC_bypass_and_get_SYSTEM_dirtectly.html
+
+
+
+
+Dec 11 th 2024
+
+https://github.com/CICADA8-Research/Penetration/tree/main
+
+Rogue OpenVpn and WireGuard! 🧭
+
+Still sending docm macros? Reconsider your phishing scripts! Send openvpn and wireguard configurations! U can easily achieve command exec using VPN : )
+
+
+https://posts.specterops.io/spa-is-for-single-page-abuse-using-single-page-application-tokens-to-enumerate-azure-8c38dc77e409
+
+
+https://en.wikipedia.org/wiki/Thales_Group ( 4 cybersec jobs)
+
+https://careers.thalesgroup.com/global/en/search-results?keywords=cyber

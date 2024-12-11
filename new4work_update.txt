@@ -543,3 +543,7 @@ https://en.wikipedia.org/wiki/Thales_Group ( 4 cybersec jobs)
 
 https://github.com/EspressoCake/Defender-Exclusions-Creator-BOF
 https://careers.thalesgroup.com/global/en/search-results?keywords=cyber
+
+
+
+ a collection of Beacon Object Files (BOFs) designed to improve productivity and enhance operational efficiency during red team engagements. This repository aggregates BOFs from various sources into a single, easy-to-navigate repository.

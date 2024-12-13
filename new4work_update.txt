@@ -400,7 +400,14 @@ https://mrexodia.github.io/files/wicc-2023-slides.pdf
 
 https://blog.compass-security.com/2024/10/voice-cloning-with-deep-learning-models/
 
+.......
 
+
+Dec 13 th 2024
+
+https://wetw0rk.github.io/posts/0x00-introduction-to-windows-kernel-exploitation/
+
+https://www.deepinstinct.com/blog/forget-psexec-dcom-upload-execute-backdoor
 
 ....
 

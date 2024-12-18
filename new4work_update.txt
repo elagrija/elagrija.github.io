@@ -571,3 +571,7 @@ LoadLibraryA and WinHTTP calls are performed with return address spoofing.
 https://medium.com/@nickvourd/local-admin-in-less-than-60-seconds-part-1-e2a0c0102b99
 
 	Hey 👋! I'm Nikos (a.k.a nickvourd or NCV), a Senior Offensive Security Consultant based in the US. I'm passionate about exploring the realms of ethical hacking and cybersecurity, and I love building Offensive Security Tooling (OST) in various programming languages. Feel free to reach out to me on Twitter or LinkedIn if you're interested in discussing anything related to Offensive Security and Red Teaming!
+
+
+
+https://www.reddit.com/r/redteamsec/comments/1hg4d5g/bypassing_crowdstrike_falcon/

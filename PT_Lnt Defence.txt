@@ -1,0 +1,25 @@
+122.187.179.248/29 ---- 122.187.179.249 -- nmap going on tic
+
+
+182.66.85.24/29 --------- nmap going on tic
+
+
+182.71.157.32/29 ---- 182.71.157.33 -- couldn't open 443 -- scanning for all ports - nmap for all going
+
+182.66.221.224/27 ----- nil - nmap going on windows ( file name 224_27)
+
+203.101.103.82 --- nil --- nmap going on tic ( file name scan.txt) inside root folder
+
+
+
+
+............
+
+nmap -sS -sV -T4 -Pn -A -p- 
+
+
+nuclei on windows
+
+
+
+katana -- web scrawl

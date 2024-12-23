@@ -575,3 +575,17 @@ https://medium.com/@nickvourd/local-admin-in-less-than-60-seconds-part-1-e2a0c01
 
 
 https://www.reddit.com/r/redteamsec/comments/1hg4d5g/bypassing_crowdstrike_falcon/
+
+
+
+.........
+
+
+
+
+23 rd Dec 2024
+
+https://beierle.win/2024-12-20-Weaponizing-WDAC-Killing-the-Dreams-of-EDR/
+
+
+	smbmap for remote machine

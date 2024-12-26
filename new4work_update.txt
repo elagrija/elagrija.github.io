@@ -599,6 +599,7 @@ BY Marcus Hutchins
 
 
 https://wetw0rk.github.io/posts/0x00-introduction-to-windows-kernel-exploitation/
+https://www.ired.team/miscellaneous-reversing-forensics/windows-kernel-internals/loading-a-windows-kernel-driver-osr-driver-loader-debugging-with-source-code
 
 application within user context can do IPC to any other process in the same users context and inject any code to steal anything, make screenshots, or just read the notifications
 

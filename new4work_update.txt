@@ -589,3 +589,23 @@ https://beierle.win/2024-12-20-Weaponizing-WDAC-Killing-the-Dreams-of-EDR/
 
 
 	smbmap for remote machine
+
+
+26 th Dec 2024
+
+https://github.com/Cracked5pider/earlycascade-injection
+https://malwaretech.com/2024/02/bypassing-edrs-with-edr-preload.html
+BY Marcus Hutchins
+
+application within user context can do IPC to any other process in the same users context and inject any code to steal anything, make screenshots, or just read the notifications
+
+
+TIL Windows keeps a record of your notifications under %localappdata%\Microsoft\Windows\Notifications. This is not locked under any privileged ACE.
+
+You can use this to exfiltrate possibly sensitive data sent over push notifications, if not build a timeline for recon.
+
+
+Exfiltared to mygithub
+
+DB Browser for SQLite.
+

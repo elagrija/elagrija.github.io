@@ -597,6 +597,9 @@ https://github.com/Cracked5pider/earlycascade-injection
 https://malwaretech.com/2024/02/bypassing-edrs-with-edr-preload.html
 BY Marcus Hutchins
 
+
+https://wetw0rk.github.io/posts/0x00-introduction-to-windows-kernel-exploitation/
+
 application within user context can do IPC to any other process in the same users context and inject any code to steal anything, make screenshots, or just read the notifications
 
 

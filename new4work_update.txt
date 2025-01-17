@@ -646,6 +646,13 @@ https://cicada-8.medium.com/im-watching-you-how-to-spy-windows-users-via-ms-uia-
 Eckhart Tolle - German Philospher
 
 
+17 th Jan 2025
+
+https://neodyme.io/en/blog/com_hijacking_1/#introduction
+
+https://hulkops.gitbook.io/blog/red-team/x64-return-address-spoofing
+
+
 
 
 

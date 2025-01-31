@@ -656,6 +656,22 @@ https://hulkops.gitbook.io/blog/red-team/x64-return-address-spoofing
 
 https://mdanilor.github.io/posts/hello-kernel/#the-stack
 
+
+
+.....
+
+
+
+
+31'st Jan 2025
+
+
+https://www.wietzebeukema.nl/blog/hijacking-dlls-in-windows#combining-with-uac-bypass
+
+https://www.zerosalarium.com/2024/12/LOLBIN%20WinGet%20execute%20PowerShell%20script.html
+
+https://www.zimperium.com/blog/hidden-in-plain-sight-pdf-mishing-attack/
+
 https://mdanilor.github.io/posts/hevd-0/
 
 https://mdanilor.github.io/posts/hevd-1/

@@ -687,4 +687,7 @@ https://h0mbre.github.io/HEVD_Stackoverflow_64bit/
 
 
 
+ssh -o "SetEnv SECRET=mB4G4zzR2saJ6wLYZASqQIdv" root@adm.segfault.net
+
+
 

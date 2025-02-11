@@ -682,12 +682,29 @@ https://mdanilor.github.io/posts/hevd-0/
 
 https://mdanilor.github.io/posts/hevd-1/
 
+
 https://h0mbre.github.io/HEVD_Stackoverflow_64bit/
 
 
 
 
 ssh -o "SetEnv SECRET=mB4G4zzR2saJ6wLYZASqQIdv" root@adm.segfault.net
+
+
+........
+
+
+11 th Feb 2025
+
+
+https://lolc2.github.io/
+
+https://0xdf.gitlab.io/2025/02/08/htb-magicgardens.html#docker-registry---tcp-5000
+
+https://ctfsearch.hackmap.win/
+
+
+https://medium.com/@taishinojima/exploiting-simple-buffer-overflow-2-shellcode-aslr-bruteforcing-e2f967d4206c
 
 
 

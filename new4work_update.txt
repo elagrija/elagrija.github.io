@@ -707,4 +707,13 @@ https://ctfsearch.hackmap.win/
 https://medium.com/@taishinojima/exploiting-simple-buffer-overflow-2-shellcode-aslr-bruteforcing-e2f967d4206c
 
 
+............
+
+
+Feb 14 th 2025
+
+https://sensepost.com/blog/2025/psexecing-the-right-way-and-why-zero-trust-is-mandatory/
+
+https://www.ired.team/offensive-security/code-injection-process-injection/binary-exploitation/stack-based-buffer-overflow
+
 

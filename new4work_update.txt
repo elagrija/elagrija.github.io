@@ -717,3 +717,19 @@ https://sensepost.com/blog/2025/psexecing-the-right-way-and-why-zero-trust-is-ma
 https://www.ired.team/offensive-security/code-injection-process-injection/binary-exploitation/stack-based-buffer-overflow
 
 
+
+27 th Feb 2025
+
+
+
+https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-050a
+
+functions to steal process tokens running under the SYSTEM user context to impersonate the SYSTEM user... how this can be done
+
+Stealing a password from impersonating process
+
+https://www.youtube.com/watch?v=pubsrWBHsZM
+
+
+https://learn.microsoft.com/en-us/security/operations/token-theft-playbook
+

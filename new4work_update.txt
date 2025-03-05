@@ -739,3 +739,17 @@ https://learn.microsoft.com/en-us/security/operations/token-theft-playbook
 
 https://m0chan.github.io/2019/08/20/Simple-Win32-Buffer-Overflow-EIP-Overwrite.html
 
+
+
+05 th March 2025
+
+Core Dumped- I'm a CS Engineer and I love teaching others about complex concepts I've learn over the years, but in a simple and easy to understand format.
+
+https://www.volexity.com/blog/2025/02/13/multiple-russian-threat-actors-targeting-microsoft-device-code-authentication/
+
+https://signal.org/
+https://element.io/download
+https://www.fortinet.com/blog/threat-research/malware-disguised-as-document-ukraine-energoatom-delivers-havoc-demon-backdoor
+
+https://mohamed-fakroud.gitbook.io/red-teamings-dojo/abusing-idispatch-for-trapped-com-object-access-and-injecting-into-ppl-processes
+

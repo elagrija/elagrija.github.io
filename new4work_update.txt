@@ -739,6 +739,8 @@ https://learn.microsoft.com/en-us/security/operations/token-theft-playbook
 
 https://m0chan.github.io/2019/08/20/Simple-Win32-Buffer-Overflow-EIP-Overwrite.html
 
+"Windows Protected Process Light" (PPL) is a security feature within the Windows operating system that protects critical system processes from tampering or termination, even by administrative users, by ensuring only trusted, digitally signed applications can access their memory and functionality, effectively preventing malicious code from interfering with essential system components like antivirus software
+
 
 
 05 th March 2025

